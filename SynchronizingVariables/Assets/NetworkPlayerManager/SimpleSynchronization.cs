@@ -36,6 +36,7 @@ public class SimpleSynchronization : NetworkComponent
             if (IsLocalPlayer)
             {
                 transform.GetChild(0).gameObject.SetActive(true);
+                
                 if(!textCreated)
                 {
                     Text playerText = transform.GetChild(0).gameObject.AddComponent<Text>();

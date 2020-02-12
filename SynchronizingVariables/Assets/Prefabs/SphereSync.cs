@@ -11,11 +11,10 @@ public class SphereSync : NetworkComponent
     {
         if(flag == "CS")
         {
-            if(IsClient)
+            if(IsServer)
             {
-                
+                MyCore.NetCreateObject(int.Parse(value), Owner, new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(2.0f, 8.0f), Random.Range(-3.0f, 3.0f)));
             }
-            SendUpdate("","");
         }
     }
 
@@ -33,11 +32,7 @@ public class SphereSync : NetworkComponent
             }
             if(IsServer)
             {
-                if(populateCond == true)
-                {
-                    
-                    populateCond = false;
-                }
+                
             }
             yield return new WaitForSeconds(MyCore.MasterTimer);
         }
@@ -45,9 +40,6 @@ public class SphereSync : NetworkComponent
 
     public void createSphere()
     {
-        Debug.Log("click");
-        Instantiate(spherePrefab, new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(2.0f, 8.0f), Random.Range(-3.0f, 3.0f)), Quaternion.identity);
-        populateCond = true;
-        SendCommand("CS", "1");
+        SendCommand("CS", "0");
     }
 }
