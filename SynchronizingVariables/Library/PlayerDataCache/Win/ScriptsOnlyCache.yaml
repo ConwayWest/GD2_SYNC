@@ -545,7 +545,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: e4d7c886f5f4ef5bc0ac4a0d333aba8a
+      Hash: 0514da41f56675487d364a8cf329f082
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SphereSync
@@ -558,4 +558,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/GD2/GD2_SYNC/SynchronizingVariables/Builds/SynchronizingVariables.exe
+  playerPath: D:/GD2/Synchronizing A Variable/GD2_SYNC/SynchronizingVariables/Builds/SynchronizingVariables.exe

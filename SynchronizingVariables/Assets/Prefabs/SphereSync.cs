@@ -5,17 +5,15 @@ using NETWORK_ENGINE;
 
 public class SphereSync : NetworkComponent
 {
-    public GameObject spherePrefab;
-    public bool populateCond = false;
     public override void HandleMessage(string flag, string value)
     {
-        if(flag == "CS")
-        {
-            if(IsServer)
+            if (flag == "CSPHERE")
             {
-                MyCore.NetCreateObject(int.Parse(value), Owner, new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(2.0f, 8.0f), Random.Range(-3.0f, 3.0f)));
+                if (IsServer)
+                {
+                    MyCore.NetCreateObject(int.Parse(value), Owner, new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(2.0f, 8.0f), Random.Range(-3.0f, 3.0f)));
+                }
             }
-        }
     }
 
     public override IEnumerator SlowUpdate()
@@ -40,6 +38,6 @@ public class SphereSync : NetworkComponent
 
     public void createSphere()
     {
-        SendCommand("CS", "0");
+        SendCommand("SPHERE", "0");
     }
 }

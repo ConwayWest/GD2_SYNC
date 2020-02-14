@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3917191948334985130}
   - component: {fileID: 3917191948334985045}
   - component: {fileID: 3603268259877902498}
+  - component: {fileID: -1233206810515525444}
   m_Layer: 0
   m_Name: NetworkPlayerManager
   m_TagString: Player
@@ -79,6 +80,27 @@ MonoBehaviour:
   score: 0
   textCreated: 0
   scoreCond: 1
+--- !u!114 &-1233206810515525444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917191948334985044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1193ef3f981a04ba5143cac0f186d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDirty: 0
+  IsClient: 0
+  IsServer: 0
+  IsLocalPlayer: 0
+  Owner: 0
+  Type: 0
+  NetId: 0
+  MyCore: {fileID: 0}
+  MyId: {fileID: 0}
 --- !u!1 &4669140277302532687
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,8 +219,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3273955604996571410, guid: b5cbb618f0eb048498b1fa1ce3d46bee,
-          type: 3}
+      - m_Target: {fileID: -1233206810515525444}
         m_MethodName: createSphere
         m_Mode: 1
         m_Arguments:
